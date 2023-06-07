@@ -41,6 +41,28 @@ body {
     color: #fff;
 }
 
+
+/* sidebar responsive queries */
+/* Custom CSS for mobile menu icon */
+@media (max-width: 500px) {
+    #sidebar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        z-index: 9999;
+        margin-left: 20px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+}
+
 /* navigation styles */
 
 nav ul {
@@ -93,7 +115,7 @@ nav ul li a {
 
 main {
     background-color: #2a2a2a;
-    width: 85%;
+    flex-grow: 1;
 }
 
 h2 {
@@ -133,8 +155,9 @@ p {
 .sign-in:hover,
 .sign-up:hover,
 .next:hover,
-.prev:hover {
-    background-color: orange;
+.prev:hover,
+.menu-icon:hover {
+    background-color: rgb(100, 218, 84);
     transform: scale(1.1);
 }
 
@@ -176,13 +199,14 @@ p {
 }
 
 .section-content {
-    display: grid;
-    grid-template-columns: repeat(5, 180px);
+    display: flex;
+    max-width: 200px;
     gap: 20px;
 }
 
 .song-container {
     position: relative;
+    flex-grow: 1;
 }
 
 .song-container img {

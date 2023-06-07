@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .grid-container {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .box {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            flex-grow: 1;
+            max-width: 250px;
+        }
+
+
+        @media (max-width: 1300px) {
+            .box:nth-child(n+5) {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 1000px) {
+            .box:nth-child(n+4) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .box:nth-child(n+3) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .box:nth-child(n+2) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+</body>
+
+</html>
